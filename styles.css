@@ -1,0 +1,182 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Gaya umum */
+  body {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 15px;
+    overflow: hidden;
+  }
+  
+  .container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.2), transparent 70%);
+    transform: rotate(45deg);
+    z-index: 0;
+  }
+  
+  h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  form input:focus {
+    outline: none;
+    border: 1px solid #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+    transform: skewX(-25deg);
+    z-index: 0;
+  }
+  
+  button:hover::before {
+    left: 100%;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+  }
+  
+  button.secondary {
+    background: #f0f0f0;
+    color: #333;
+  }
+  
+  button.secondary:hover {
+    background: #e6e6e6;
+  }
+  
+  small {
+    display: block;
+    margin-top: 15px;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animasi background */
+  body::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+    animation: rotateBackground 10s linear infinite;
+    z-index: -1;
+  }
+  
+  @keyframes rotateBackground {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Responsif */
+  @media (max-width: 480px) {
+    .container {
+      padding: 25px;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  
+    form input {
+      font-size: 14px;
+    }
+  }
+  
